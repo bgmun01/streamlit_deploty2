@@ -34,13 +34,13 @@ if select1 == '월별이용현황':
   # 월별이용현황 그래프 그리기
   fig = plt.figure()
   ax = plt.axes()
-  plt.title('서울 공공자전거 월별 이용현황',encoding='UTF-8')
+  plt.title('서울 공공자전거 월별 이용현황')
   plt.plot(df_12_daeyeo.index.astype(str),df_12_daeyeo.이용건수,label='이용건수(단위:백만명)',color = 'lightpink')
   plt.xticks(np.arange(0,13), rotation=45)
   plt.ylim(1300000,5000000)
   plt.legend(loc=(0,0))
-  plt.xlabel('대여일자',encoding='UTF-8')
-  plt.ylabel('이용건수',encoding='UTF-8')
+  plt.xlabel('대여일자')
+  plt.ylabel('이용건수')
 
   st.pyplot(fig, use_container_width=True)
 
@@ -62,10 +62,10 @@ elif select1 == '자치구별이용현황':
   ax = plt.axes() # 축을 관리하는 변수
 
   plt.bar(df_last2['소재지(위치)'], df_last2['이용건수'] ,color = 'gray')
-  plt.xlabel('소재지(위치)', fontsize=50,encoding='UTF-8')
-  plt.ylabel('이용건수', fontsize=50,encoding='UTF-8')
+  plt.xlabel('소재지(위치)', fontsize=50)
+  plt.ylabel('이용건수', fontsize=50)
   plt.ylim(0, 4000000)
-  plt.title('서울시내 구별 공공자전거 이용건수', fontsize=100,encoding='UTF-8')
+  plt.title('서울시내 구별 공공자전거 이용건수', fontsize=100)
   plt.xticks(fontsize=30,rotation=45)
 
   st.pyplot(fig, use_container_width=True)
